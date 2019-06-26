@@ -13,7 +13,7 @@ class Header extends Component {
           <li><a href="/auth/google">Login With Google</a></li>
         )
       default: 
-        return <li><a>LogOut</a></li>
+        return <li><a href="/api/logout">LogOut</a></li>
     }
   }
 
