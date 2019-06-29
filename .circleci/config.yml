@@ -2,13 +2,13 @@ version: 2
 jobs:
   build1:
     docker:
-     - image: "circleci/node:9.6.1"
+     - image: circleci/node:9.6.1
     steps:
        - checkout
        - run: echo "Hello there!"
   build2:
     docker:
-     - image: "circleci/node:9.6.1"
+     - image: circleci/node:9.6.1
     steps:
       - checkout
       - run: echo "Good Bye"
