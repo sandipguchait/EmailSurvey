@@ -2,21 +2,19 @@ version: 2
 jobs:
   build1:
     docker:
-     - image: circleci/node:9.6.1
+       - image: circleci/ruby:2.4.1
     steps:
        - checkout
        - run: echo "Hello there!"
   build2:
     docker:
-     - image: circleci/node:9.6.1
+      - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "Good Bye"
   workflows:
-    # Name the workflow "Welcome"
+    version: 2
     CircleciTesting:
-      # Run the welcome/run job in its own container
       jobs:
-        - welcome/run
         - build1
         - build2
