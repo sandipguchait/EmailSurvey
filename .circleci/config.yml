@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run: echo "Good Bye"
-  workflows:
-    version: 2
-    CircleciTesting:
-      jobs:
-        - build1
-        - build2
+workflows:
+  version: 2
+  CircleciTesting:
+    jobs:
+      - build1
+      - build2
