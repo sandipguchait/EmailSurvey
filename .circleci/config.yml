@@ -1,8 +1,5 @@
-version: 2.1
-orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.3.1
-  # JOBS String here
+version: 2
+
   jobs:
     build1:
       docker:
