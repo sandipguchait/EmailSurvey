@@ -1,22 +1,22 @@
 version: 2
 jobs:
-  run:
+  Installing:
     docker:
        - image: circleci/node:8.9
     steps:
        - checkout
        - run: echo "Installing"
-       - run: cd client && npm install 
+       - run: npm install 
   build:
     docker:
       - image: 
     steps:
       - checkout
       - run: echo "Building"
-      - run: npm run build
+      - run: CI=true npm run build
 workflows:
   version: 2
   CircleciTesting:
     jobs:
-      - run
+      - Installing
       - build
