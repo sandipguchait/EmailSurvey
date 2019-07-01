@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Building"
-      - run: CI=true npm run build
+      - run: CI=true npm run build --prefix client
 workflows:
   version: 2
   CircleciTesting:
