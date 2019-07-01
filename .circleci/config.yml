@@ -6,7 +6,7 @@ jobs:
     steps:
        - checkout
        - run: echo "Installing"
-       - run: npm install
+       - run: cd client && npm install 
   build:
     docker:
       - image: 
