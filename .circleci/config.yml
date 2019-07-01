@@ -7,7 +7,6 @@ jobs:
        - checkout
        - run: echo "Installing"
        - run: npm install 
-       - run: npm run dev
 workflows:
   version: 2
   CircleciTesting:
