@@ -4,3 +4,5 @@
 #2. Define node engines
 #3. Specify start script
 #4. create a .gitignore file 
+#5. NODE_ENV variables on heroku 
+#6. setting up file path for frontend route
