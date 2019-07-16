@@ -5,7 +5,8 @@
  const passport = require('passport');
  const bodyParser = require('body-parser');
  const keys = require('./config/keys');
- require('./models/User');
+ require('./models/User'); //User schema
+ require('./models/Survey'); //Survey schema
  require('./services/passport'); //services
  const authRoutes = require('./routes/authRoutes'); //authroutes
  const billingRoutes = require('./routes/billingRoutes'); //billingroute
@@ -15,6 +16,7 @@
  const app = express();
  app.use(cors());
  app.use(bodyParser.json());
+ 
  //configuring cookie session
  app.use(
    cookieSession({
