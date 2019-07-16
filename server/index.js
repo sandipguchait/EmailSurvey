@@ -10,13 +10,14 @@
  require('./services/passport'); //services
  const authRoutes = require('./routes/authRoutes'); //authroutes
  const billingRoutes = require('./routes/billingRoutes'); //billingroute
+ const surveyRoutes = require('./routes/surveyRoutes');
  
  mongoose.connect(keys.mongoURI,{ useNewUrlParser: true })
 
  const app = express();
  app.use(cors());
  app.use(bodyParser.json());
- 
+
  //configuring cookie session
  app.use(
    cookieSession({
@@ -29,6 +30,7 @@
   app.use(passport.session());
   authRoutes(app); //routes
   billingRoutes(app); //routes
+  surveyRoutes(app);// routes
 
   
   //Seeting front end file path for heroku with routes.
