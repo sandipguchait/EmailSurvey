@@ -6,6 +6,7 @@ import reducers from './reducers';
 import { Provider } from 'react-redux';
 import reduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
+import './style.css';
 
 //development purpose
 import axios from 'axios'
