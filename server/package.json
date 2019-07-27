@@ -11,8 +11,9 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server --silent\" \"npm run client\"",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \"npm run server --silent\" \"npm run client\" \"npm run webhook\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client",
+    "webhook":"lt -p 5000 -s fhfyfgfm"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "cookie-session": "^1.3.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "localtunnel": "^1.9.2",
     "mongoose": "^5.6.0",
     "nodemon": "^1.19.1",
     "passport": "^0.4.0",
